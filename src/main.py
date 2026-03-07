@@ -15,7 +15,7 @@ from month_runner import run_month_pipeline, run_period_pipeline
 st.set_page_config(page_title="Chess Blunder Finder", layout="wide")
 
 st.title("♟️ Chess Blunder Finder")
-st.caption("Analyze chess games to uncover recurring mistakes and tactical weaknesses.")
+st.caption("Behavioural analytics for everyday chess players.")
 
 
 if "deep_df" not in st.session_state:

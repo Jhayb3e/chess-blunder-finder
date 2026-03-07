@@ -4,24 +4,36 @@
 ![Stockfish](https://img.shields.io/badge/Engine-Stockfish-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
+## Project Overview
 
-Chess Blunder Finder is a behavioral analytics pipeline that analyzes chess player decision-making patterns using the Stockfish engine.
+Chess Blunder Finder is a behavioural analytics tool that analyzes chess games to detect recurring mistakes and tactical weaknesses.
 
-The system fetches games from Chess.com, evaluates each move, detects tactical motifs, and generates insights about recurring mistakes.
+Most chess analysis tools evaluate **individual games**.  
+This project analyzes **many games over time** to reveal patterns in how a player actually loses games.
+
+The goal is not to train professional chess players.  
+Instead, it helps everyday players understand their **own behaviour on the board** so they can improve gradually without relearning chess from scratch.
+
+For many hobby players, chess is like the gym for the mind — a way to train thinking and discipline.  
+By identifying patterns such as repeated blunders or missed tactics, players can become more conscious of their habits and make steady improvements.
 
 ---
 
-## Project Goal
+## Project Highlights
 
-Most chess analysis tools evaluate individual games.  
-This project analyzes **many games over time** to detect patterns in how a player loses games.
+• Built a behavioural analytics pipeline that analyzes chess games to detect recurring player weaknesses.
 
-The system identifies patterns in:
+• Fetches games directly from the Chess.com public API.
 
-- Game phase (Opening / Middlegame / Endgame)
-- Tactical motifs (Forks, Pins, Skewers, Traps)
-- Evaluation drops from engine analysis
-- Repeated player mistakes
+• Uses the Stockfish engine to evaluate every move and detect inaccuracies, mistakes, and blunders.
+
+• Detects tactical motifs such as forks, pins, skewers, and traps using board-state analysis.
+
+• Aggregates move-level evaluations into player-level behavioural insights.
+
+• Generates structured outputs (CSV and JSON) suitable for dashboards and further analysis.
+
+• Includes a Streamlit interface allowing users to analyze a player’s games by year or selected months.
 
 ---
 
@@ -39,9 +51,10 @@ Insight Engine
 ↓  
 Streamlit Application  
 ↓  
-CSV/json Output  
+CSV / JSON Output  
 ↓  
-Power Bi Dashboards
+Power BI Dashboards (planned)
+
 ---
 
 ## Tech Stack
@@ -57,23 +70,23 @@ Power Bi Dashboards
 
 ## How to Run
 
-## Install dependencies
+### Install dependencies
 
 
--pip install -r requirements.txt
+pip install -r requirements.txt
 
 
-## Run the application
+### Run the application
 
 
--streamlit run src/main.py
+streamlit run src/main.py
 
 
-## Then open the browser and enter:
+Then open the browser and enter:
 
-- Chess.com username
-- Year
-- Months to analyze
+• Chess.com username  
+• Year  
+• Months to analyze
 
 ---
 
@@ -81,26 +94,22 @@ Power Bi Dashboards
 
 The system generates datasets in the project folders:
 
-Deep analysis data:
-
+Deep analysis data  
 
 data/deep_analysis/
 
 
-Tactical motif detection:
-
+Tactical motif detection  
 
 data/motifs/
 
 
-Generated insights:
-
+Generated insights  
 
 data/insights/
 
 
-Monthly results:
-
+Monthly results  
 
 outputs/{username}/{year}/{month}
 
@@ -115,13 +124,19 @@ You often blunder in the middlegame with fork.
 You often blunder in the endgame with trap.  
 You often mistake in the opening with fork.
 
+---
+
 ## Application Interface
 
 ![Streamlit App](screenshots/app_interface.png)
 
+---
 
 ## Future Improvements
 
+- Aggregated yearly insights
+- Game-type analysis (Blitz / Rapid / Bullet)
+- Summary statistics (average blunders, mistakes, inaccuracies)
 - Docker containerization
 - Cloud deployment
 - Automated dashboards
