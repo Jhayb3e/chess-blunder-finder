@@ -42,3 +42,26 @@ and also for the full year also has to be implemented/ confirmed.
 - Display game type filters
 - Better summary visualization
 - Remove unused UI tabs
+
+
+Docker containerization
+Cloud deployment
+
+
+Version 2
+
+Custom month aggregated insights
+
+Yearly summary insights
+
+Game type analysis (Blitz / Rapid / Bullet)
+
+Summary statistics (avg blunders etc.)
+
+Version 3
+
+Docker containerization
+
+Cloud deployment
+
+Do not jump straight to
