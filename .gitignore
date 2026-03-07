@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Environments
+.venv/
+venv/
+.env
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Project data (do not commit personal data)
+games/
+outputs/
+data/deep_analysis/
+data/motifs/
+data/insights/
+
+# Files to avoid committing by default
+*.pgn
+*.csv
+
+# Optional large binaries
+stockfish-windows*
