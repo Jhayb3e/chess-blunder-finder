@@ -131,6 +131,37 @@ You often mistake in the opening with fork.
 ![Streamlit App](screenshots/app_interface.png)
 
 ---
+## Power BI Dashboard
+
+This project includes a Power BI dashboard built on top of a structured SQL database.
+
+### Key Features
+
+- Blunder distribution across game phases
+- Tactical motif analysis (forks, pins, skewers, traps)
+- Error trends over time
+- Performance comparison across time controls
+
+### Dataset Summary
+
+- ~292 games analysed
+- ~9,900 moves evaluated using Stockfish
+- Tactical motifs extracted and normalised for analysis
+
+### Data Pipeline
+
+Chess.com API → Python → Stockfish → CSV → SQLite → Power BI
+
+### Dashboard Preview
+
+#### Performance Overview
+![Performance Overview](screenshots/overview.png)
+
+#### Tactical Motifs Analysis
+![Tactical Motifs](screenshots/motifs.png)
+
+#### Game Trends
+![Game Trends](screenshots/trends.png)
 
 ## Future Improvements
 
