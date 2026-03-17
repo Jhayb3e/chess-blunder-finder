@@ -152,16 +152,11 @@ This project includes a Power BI dashboard built on top of a structured SQL data
 
 Chess.com API → Python → Stockfish → CSV → SQLite → Power BI
 
-### Dashboard Preview
+## Dashboard Preview
 
-#### Performance Overview
-![Performance Overview](screenshots/overview.png)
-
-#### Tactical Motifs Analysis
-![Tactical Motifs](screenshots/motifs.png)
-
-#### Game Trends
-![Game Trends](screenshots/trends.png)
+![Overview](screenshots/overview.png)
+![Motifs](screenshots/motifs.png)
+![Trends](screenshots/trends.png)
 
 ## Future Improvements
 
